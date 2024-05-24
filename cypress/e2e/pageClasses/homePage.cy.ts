@@ -1,12 +1,12 @@
 class HomePage {
-    about_in_navbar = '#about';
-    learnmore_link_in_aboutmodal = '#megamenu-27261 .link'
+    about_in_navbar:string = '#about';
+    learnmore_link_in_aboutmodal:string = '#megamenu-27261 .link'
 
 
-    getAboutInNavBar(){
+    getAboutInNavBar():Cypress.Chainable<JQuery<HTMLElement>>{
         return cy.get(this.about_in_navbar)
     }
-    getLearnMoreLinkInAboutModal(){
+    getLearnMoreLinkInAboutModal():Cypress.Chainable<JQuery<HTMLElement>>{
         return cy.get(this.learnmore_link_in_aboutmodal)
     }
 

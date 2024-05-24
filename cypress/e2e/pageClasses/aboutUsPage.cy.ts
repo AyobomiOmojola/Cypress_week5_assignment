@@ -1,8 +1,8 @@
 class AboutUs {
-    major_heading_text = '#we-power-fused-software-testing-to-enable-human-possibilities';
+    major_heading_text:string = '#we-power-fused-software-testing-to-enable-human-possibilities';
 
 
-    getMajorHeadingText(){
+    getMajorHeadingText():Cypress.Chainable<JQuery<HTMLElement>> {
         return cy.get(this.major_heading_text);
     }
 

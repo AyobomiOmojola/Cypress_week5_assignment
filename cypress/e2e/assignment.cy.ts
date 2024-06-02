@@ -1,6 +1,6 @@
-import HomePage from "./pageClasses/homePage.cy"
-import AboutUs from "./pageClasses/aboutUsPage.cy";
-
+import {HomePage} from "./pageClasses/homePage.cy"
+import {AboutUs} from "./pageClasses/aboutUsPage.cy";
+import {URL} from '../fixtures/constants'
 
 describe('Testlio', () => {
   it('first test case', () => {
@@ -8,7 +8,7 @@ describe('Testlio', () => {
     const aboutus = new AboutUs
 
     // go to the testlio website homepage
-    cy.visit(Cypress.env('url'))
+    cy.visit(URL.url)
 
     // print out the title of the homepage which says 'Your trusted partner in critical testing moments'
     cy.title().then((title:string) => {
@@ -16,14 +16,12 @@ describe('Testlio', () => {
     })
 
     // click on about
-    homepage.getAboutInNavBar().click()
+    homepage.getAboutInNavBar()
 
     // click on learn more link
-    homepage.getLearnMoreLinkInAboutModal().click()
+    homepage.getLearnMoreLinkInAboutModal()
 
     // locate and print out text 'We power fused software testing to enable human possibilities' 
-    aboutus.getMajorHeadingText().then((e) => {
-      console.log(e.text());
-    })
+    aboutus.getMajorHeadingText()
     })
 })

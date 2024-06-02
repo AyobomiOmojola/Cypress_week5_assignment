@@ -1,15 +1,18 @@
+import {homepageLocators} from '../../fixtures/Locators/homepage'
+
 class HomePage {
-    about_in_navbar:string = '#about';
-    learnmore_link_in_aboutmodal:string = '#megamenu-27261 .link'
+    homepageLocators = homepageLocators
+    // about_in_navbar:string = '#about';
+    // learnmore_link_in_aboutmodal:string = '#megamenu-27261 .link'
 
 
     getAboutInNavBar():Cypress.Chainable<JQuery<HTMLElement>>{
-        return cy.get(this.about_in_navbar)
+        return cy.get(this.homepageLocators.about_in_navbar).click()
     }
     getLearnMoreLinkInAboutModal():Cypress.Chainable<JQuery<HTMLElement>>{
-        return cy.get(this.learnmore_link_in_aboutmodal)
+        return cy.get(this.homepageLocators.learnmore_link_in_aboutmodal).click()
     }
 
 }
 
-export default HomePage;
+export {HomePage};

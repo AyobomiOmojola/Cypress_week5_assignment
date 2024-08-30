@@ -11,5 +11,8 @@
   "dependencies": {
     "cypress": "^13.9.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
   }
 }

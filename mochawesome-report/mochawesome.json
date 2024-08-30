@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-30T07:39:21.565Z",
+    "end": "2024-08-30T07:39:22.586Z",
+    "duration": 1021,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3e58fe3d-b4d3-40dd-85e7-45615070f85f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\assignment.cy.ts",
+      "file": "cypress\\e2e\\assignment.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd548dd6-3765-49e1-a139-d46c1649942e",
+          "title": "Testlio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first test case",
+              "fullTitle": "Testlio first test case",
+              "timedOut": null,
+              "duration": 780,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var homepage = new homePage_cy_1.HomePage;\nvar aboutus = new aboutUsPage_cy_1.AboutUs;\n// go to the testlio website homepage\ncy.visit(constants_1.URL.urll);\n// print out the title of the homepage which says 'Your trusted partner in critical testing moments'\ncy.title().then(function (title) {\n    console.log(title);\n});\n// click on about\nhomepage.getAboutInNavBar();\n// click on learn more link\nhomepage.getLearnMoreLinkInAboutModal();\n// locate and print out text 'We power fused software testing to enable human possibilities' \naboutus.getMajorHeadingText();",
+              "err": {
+                "message": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+                "estack": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n    at Context.visit (http://localhost:58486/__cypress/runner/cypress_runner.js:131103:70)\n    at wrapped (http://localhost:58486/__cypress/runner/cypress_runner.js:138806:43)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress_week5_assignment/./cypress/e2e/assignment.cy.ts:11:0)",
+                "diff": null
+              },
+              "uuid": "b41ed48a-d01a-414c-90b3-d528d674523d",
+              "parentUUID": "fd548dd6-3765-49e1-a139-d46c1649942e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b41ed48a-d01a-414c-90b3-d528d674523d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
